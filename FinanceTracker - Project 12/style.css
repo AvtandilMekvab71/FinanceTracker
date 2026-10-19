@@ -1,0 +1,209 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: inter, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header{
+    background-color: hsla(271, 72%, 58%, 0.568);
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 1.7rem;
+}
+.expenseForm{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(244, 244, 243, 0.879);
+    align-items: center;
+    justify-content: center;
+}
+#expenseName{
+    text-wrap: wrap;
+}
+.formInput{
+    padding: 8.5px;
+    border: 1px solid hsla(0, 4%, 77%, 0.974);
+    border-radius: 5px;
+    width: 75%;
+    font-size: 0.9rem;
+}
+.submit{
+    width: 45%;
+    padding: 9px;
+    background-color: hsl(126, 62%, 57%);
+    color:white;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+.submit:hover{
+    background-color: hsla(126, 62%, 57%, 0.774);
+  
+}
+.domTable{
+    width:100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    border: 1px solid hsla(0, 0%, 0%, 0.326);
+}
+.th{
+    border: 1px solid hsla(0, 0%, 0%, 0.167);
+    text-align: left;
+    padding: 10px;
+    background-color: rgba(246, 246, 246, 0.821);
+}
+.tr{
+    border: 1px solid hsla(0, 0%, 0%, 0.167);
+    text-align: left;
+    padding: 17px;
+}
+.td{
+    border: 1px solid hsla(0, 0%, 0%, 0.167);
+    text-align: left;
+    padding: 17px;
+}
+.edit, .delete{
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.15rem;
+    color:white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.edit{
+    background-color: hsl(205, 92%, 48%);
+}
+.edit:hover{
+    background-color: hsla(197, 75%, 44%, 0.886)
+   
+}
+.delete{
+    background-color: hsla(1, 76%, 45%, 0.863);
+}
+.delete:hover{
+    background-color: rgba(202, 31, 28, 0.695);
+}
+.stats{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    gap:5px;
+    width: 100%;
+}
+.total{
+    position: absolute;
+    right: 0;
+    margin-right: 25px;
+    font-weight: bold;
+}
+.filterLabel{
+    margin-left: 10px;
+}
+.default{
+    font-size: 1.2rem;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px; 
+}
+.bg{
+    background-color: hsla(120, 2%, 92%, 0.753);
+}
+#overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsla(0, 0%, 0%, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+#overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}
+#modal{
+    background-color: white;
+    border:none;
+    border-radius:10px;
+    padding: 12px 15px;
+    text-align: center;
+    gap: 10px;
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(0);
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    width: 50%;
+}
+#modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+#title{
+    margin-bottom: 15px;
+    margin-top: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#modalForm{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-bottom: 10px;
+}
+.input{
+    font-size: 15px;
+    padding: 7px;
+    border-radius: 7px;
+    border: 2px solid rgb(232, 230, 230)
+}
+#btns{
+    margin-top: 15px;
+}
+#saveBtn{
+    border:none;
+    padding:8px;
+    font-weight: bold;
+    color:white;
+    background-color: rgb(10, 173, 10);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+#saveBtn:hover{
+    background-color:rgba(10, 173, 10, 0.832) ;
+}
+#cancelBtn{
+    border:none;
+    padding: 8px;
+    font-weight: bold;
+    color:white;
+    background-color: rgba(211, 12, 12, 0.841);
+    border-radius: 12px;
+    cursor: pointer;
+    transition:0.3s ease;
+}
+#cancelBtn:hover{
+    background-color: rgba(211, 12, 12, 0.662);
+}
+
+

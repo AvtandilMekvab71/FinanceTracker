@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Comfortaa:wght@300..700&family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&family=MedievalSharp&family=Orbitron:wght@400..900&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="header">Expense Tracker</h1>
+    <form class = 'expenseForm'>
+        <input type="text" id="expenseName" name="expenseName" class="formInput" placeholder="Expense Name" required>
+        <input type="text" id="amount" name="amount" placeholder="Amount" class="formInput" required>
+        <select name="expenseCategory" id="expenseCategory" class="formInput" placeholder="Select Category" required>
+            <option value="" hidden disabled selected class="formInput">Select Category</option>
+            <option value="food" class="formInput">Food & Groceries</option>
+            <option value="housing" class="formInput">Housing</option>
+            <option value="transport" class="formInput">Transport</option>
+            <option value="health" class="formInput">Health</option>
+            <option value="entertainment" class="formInput">Entertainment</option>
+            <option value="education" class="formInput">Education</option>
+        </select>
+        <input type="date" id="date" name="date" class="formInput" required>
+        <button type="submit" id="submit" class="submit" name="submit">Add Expense</button>
+    </form>
+
+    <table class="domTable">
+        <thead>
+            <tr class="tr">
+                <th class="th">Expense Name</th>
+                <th class="th">Amount</th>
+                <th class="th">Category</th>
+                <th class="th">Date</th>
+                <th class="th">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="tr">
+                <td class="td">Coffe</td>
+                <td class="td">$5.00</td>
+                <td class="td">Food</td>
+                <td class="td">2026-29-09</td>
+                <td class="td">
+                    <button class="edit" >Edit</button>
+                    <button class="delete" >Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+    <div class="stats">
+        <label for="filter" class="filterLabel">Filter by Category</label>
+        <select name="filter" id="filter">
+            <option value="all">All</option>
+            <option value="food">Food</option>
+            <option value="housing">Housing</option>
+            <option value="transport">Transport</option>
+            <option value="health">Health</option>
+            <option value="entertainment">Entertainment</option>
+            <option value="education">Education</option>
+        </select>
+        <p class="total">Total: $5.00</p>
+    </div>
+
+    
+
+
+    <script src='index.js'></script>
+</body>
+</html>
